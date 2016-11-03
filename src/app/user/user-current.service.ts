@@ -10,8 +10,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class UserCurrent {
 
+    private _isSignedIn = false;
+
     isSignedIn() {
-        return true;
+        return this._isSignedIn;
     }
 
 }

@@ -24,7 +24,6 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -104,8 +103,7 @@ module.exports = function (options) {
           test: /\.ts$/,
           loaders: [
             '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-            'awesome-typescript-loader',
-            'angular2-template-loader'
+            'awesome-typescript-loader'
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
@@ -138,7 +136,19 @@ module.exports = function (options) {
         {
           test: /\.html$/,
           loader: 'raw-loader',
-          exclude: [helpers.root('src/index.html')]
+          exclude: [
+              helpers.root('src/index.html'),
+              /\.async\.html$/
+          ]
+        },
+
+        /**
+         * File loader support for *.async.html
+         * Return a URL to the file.
+         */
+        {
+          test: /\.async\.html$/,
+          loaders: ['file?name=[name].[hash].[ext]', 'extract', 'html'],
         },
 
         /* File loader for supporting images, for example, in CSS files.

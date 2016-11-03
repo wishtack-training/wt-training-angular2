@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
 import { UserCurrent } from '../user/user-current.service';
 
 @Component({
-    template: '<div>test</div>'
+    templateUrl: require('./login.component.async.html')
 })
 export class LoginComponent {
 
-    constructor(public userCurrent: UserCurrent) {
+    constructor(private userCurrent: UserCurrent) {
 
     }
 
