@@ -12,6 +12,7 @@ const commonConfig = require('./webpack.common.js'); // the settings that are co
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 /**
  * Webpack Constants
@@ -137,6 +138,8 @@ module.exports = function (options) {
 
         }
       }),
+
+      new LiveReloadPlugin()
 
     ],
 

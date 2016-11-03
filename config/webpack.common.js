@@ -35,7 +35,11 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
+
+  let env = options.env;
+
   isProd = options.env === 'production';
+
   return {
 
     /*
@@ -200,13 +204,12 @@ module.exports = function (options) {
        *
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
-      new CopyWebpackPlugin([{
-        from: 'src/assets',
-        to: 'assets',
-      }, {
-        from: 'src/meta',
-      }, ]),
-
+      // new CopyWebpackPlugin([{
+      //   from: 'src/assets',
+      //   to: 'assets',
+      // }, {
+      //   from: 'src/meta',
+      // }, ]),
 
       /*
        * Plugin: HtmlWebpackPlugin
@@ -217,6 +220,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
+        env: env,
         template: 'src/index.html',
         title: METADATA.title,
         chunksSortMode: 'dependency',
