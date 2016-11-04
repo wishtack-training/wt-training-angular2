@@ -84,7 +84,7 @@
       100
     ],
     "no-require-imports": false,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "object-literal-sort-keys": false,
     "trailing-comma": [
       true,
@@ -107,9 +107,6 @@
     "one-line": [
       true,
       "check-open-brace",
-      "check-catch",
-      "check-else",
-      "check-finally",
       "check-whitespace"
     ],
     "quotemark": [
