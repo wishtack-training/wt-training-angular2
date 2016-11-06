@@ -94,6 +94,14 @@ module.exports = function (options) {
         },
 
         /**
+         * Overriding angular2-template-loader in order to disable keepUrl option.
+         */
+        {
+          test: /\.ts$/,
+          loader: 'angular2-template'
+        },
+
+        /**
          * Typescript loader support for .ts and Angular 2 async routes via .async.ts
          *
          * See: https://github.com/s-panferov/awesome-typescript-loader

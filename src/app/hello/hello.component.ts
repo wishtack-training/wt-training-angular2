@@ -8,7 +8,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: require('./hello.component.html')
+    templateUrl: './hello.component.async.html'
 })
 export class HelloComponent {
 }
