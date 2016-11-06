@@ -1,0 +1,15 @@
+<div>
+
+    <button
+            *ngFor="let user of userList"
+            (click)="selectUser({user: user})">
+        <span>{{ user.firstName }}</span>
+    </button>
+
+    <div *ngIf="selectedUser">
+        <span>{{ selectedUser.firstName }}</span>
+        <span> </span>
+        <span>{{ selectedUser.lastName }}</span>
+    </div>
+
+</div>

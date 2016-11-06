@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
-import { HelloModule } from './hello/hello.module';
+import { UserModule } from './user/user.module';
 import { SharedModule } from './shared.module';
 
 /**
@@ -20,9 +20,9 @@ import { SharedModule } from './shared.module';
     ],
     /* Imports Angular's modules. */
     imports: [
-        HelloModule,
         RouterModule.forRoot(ROUTES, {useHash: true}),
-        SharedModule
+        SharedModule,
+        UserModule
     ],
     /* Expose our Services and Providers into Angular's dependency injection. */
     providers: [
