@@ -22,6 +22,6 @@ import { BrowserModule } from '@angular/platform-browser';
         HttpModule
     ]
 })
-export class AppCommonModule {
+export class SharedModule {
 
 }
