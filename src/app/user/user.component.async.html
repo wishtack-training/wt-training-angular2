@@ -1,0 +1,10 @@
+<div>
+    <span class="wt-user-name">
+        <span>{{ user.firstName }}</span>
+        <span>{{ user.lastName }}</span>
+    </span>
+    <button
+            (click)="removeUser({user: user})"
+            class="wt-user-remove"
+            type="button">REMOVE</button>
+</div>

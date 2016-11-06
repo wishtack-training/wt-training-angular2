@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
-import { UserSelectorComponent } from './user/user-selector.component';
+
+import { UserListComponent } from './user/user-list.component';
+
 
 export const ROUTES: Routes = [
-  { path: '', component: UserSelectorComponent }
+    {path: '', component: UserListComponent}
 ];

@@ -1,0 +1,14 @@
+<form
+        [formGroup]="userFormGroup"
+        (ngSubmit)="saveUser()">
+
+    <input
+            name="firstName"
+            formControlName="firstName">
+    <input
+            name="lastName"
+            formControlName="lastName">
+
+    <button type="submit">SAVE</button>
+
+</form>

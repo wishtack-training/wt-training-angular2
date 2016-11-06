@@ -1,0 +1,11 @@
+<section>
+
+    <wt-user-form
+            (userChange)="addUser({user: $event})"></wt-user-form>
+
+    <wt-user
+            *ngFor="let user of userList"
+            [user]="user"
+            (userRemove)="removeUser({user: $event})"></wt-user>
+
+</section>
