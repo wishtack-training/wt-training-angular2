@@ -8,6 +8,8 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared.module';
+import { UserStore } from './user/user-store';
+import { UserStoreRemote } from './user/user-store-remote';
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -26,7 +28,11 @@ import { SharedModule } from './shared.module';
     ],
     /* Expose our Services and Providers into Angular's dependency injection. */
     providers: [
-        ENV_PROVIDERS
+        ENV_PROVIDERS,
+        {
+            provide: UserStore,
+            useClass: UserStoreRemote
+        }
     ]
 })
 export class AppModule {

@@ -8,11 +8,13 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { ResourceModule } from '../common/resource/resource.module';
 import { SharedModule } from '../shared.module';
 import { UserListComponent } from './user-list.component';
 import { UserComponent } from './user.component';
 import { UserFormComponent } from './user-form.component';
 import { UserStore } from './user-store';
+import { UserStoreRemote } from './user-store-remote';
 
 @NgModule({
     declarations: [
@@ -23,10 +25,12 @@ import { UserStore } from './user-store';
     ],
     imports: [
         ReactiveFormsModule,
+        ResourceModule,
         SharedModule
     ],
     providers: [
-        UserStore
+        UserStore,
+        UserStoreRemote
     ]
 })
 export class UserModule {
