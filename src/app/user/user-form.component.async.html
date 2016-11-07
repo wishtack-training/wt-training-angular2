@@ -2,13 +2,22 @@
         [formGroup]="userFormGroup"
         (ngSubmit)="saveUser()">
 
-    <input
+    <md-input
+            formControlName="firstName"
             name="firstName"
-            formControlName="firstName">
-    <input
-            name="lastName"
-            formControlName="lastName">
+            placeholder="First name">
+    </md-input>
 
-    <button type="submit">SAVE</button>
+    <md-input
+            formControlName="lastName"
+            name="lastName"
+            placeholder="Last name">
+    </md-input>
+
+    <button
+            md-fab
+            type="submit">
+        <md-icon class="md-24">add</md-icon>
+    </button>
 
 </form>

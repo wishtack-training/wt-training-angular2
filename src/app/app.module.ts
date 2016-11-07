@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 /*
  * Platform and Environment providers/directives/pipes
@@ -20,6 +21,7 @@ import { SharedModule } from './shared.module';
     ],
     /* Imports Angular's modules. */
     imports: [
+        MaterialModule.forRoot(),
         RouterModule.forRoot(ROUTES, {useHash: true}),
         SharedModule,
         UserModule

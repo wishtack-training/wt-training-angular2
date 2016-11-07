@@ -13,7 +13,8 @@ import { AppState } from './app.service';
     selector: 'app',
     encapsulation: ViewEncapsulation.None,
     styles: [
-        require('./app.component.css')
+        require('./app.component.css'),
+        require('@angular/material/core/theming/prebuilt/indigo-pink.css')
     ],
     template: require('./app.component.html')
 })

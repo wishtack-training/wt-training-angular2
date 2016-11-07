@@ -6,6 +6,7 @@
  */
 
 import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
+import { MaterialModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 
@@ -20,6 +21,7 @@ describe('UserListComponent', () => {
 
         TestBed.configureTestingModule({
             imports: [
+                MaterialModule.forRoot(),
                 UserModule
             ]
         })
